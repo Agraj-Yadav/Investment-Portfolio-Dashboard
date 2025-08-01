@@ -6,6 +6,7 @@ import plotly.graph_objects as go
 import datetime
 import plotly.express as px
 from storbrr import tickerframe
+import openpyxl
 st.set_page_config(layout="wide", page_title="Portfolio Dashboard")
 st.title("Investment Portfolio Display")
 
