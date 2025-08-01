@@ -6,7 +6,6 @@ import plotly.graph_objects as go
 import datetime
 import plotly.express as px
 from storbrr import tickerframe
-import openpyxl
 st.set_page_config(layout="wide", page_title="Portfolio Dashboard")
 st.title("Investment Portfolio Display")
 
@@ -34,6 +33,13 @@ def plotstock(plotthis,nam,tit):
                  type = 'date')
     )
     st.plotly_chart(fig,use_container_width=True)
+
+def var(pch):
+    dictemp = {}
+    xlist = [1,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,99]
+    for x in xlist:
+        dictemp[x] = pch['Close'].quantile(1-(x/100))
+    return dictemp
 
 num_stocks = len(tickers)
 if num_stocks == 1:
@@ -63,7 +69,7 @@ for i,ticker1 in enumerate(tickers):
                 delta=f"{pct_change}%"
                 )
             plotstock(data1[ticker1],ticker1,f'{ticker1} Closing Prices')
-            investments[ticker1] = st.number_input(f"How much did u invest in {ticker1}?")
+            investments[ticker1] = st.number_input(f"How much did u invest in {ticker1}?",value=1)
 #   investments[ticker1] = st.number_input(f"How much did u invest in {ticker1}?")
     totalinvestment+=investments[ticker1]
 # More robust - collect all weighted prices first
@@ -155,3 +161,17 @@ with st.expander("Your Portfolio"):
             <p>Avg correlation: {:.2f}</p>
             </div>
             """.format(avg_correlation), unsafe_allow_html=True)
+    for x in range(3):
+        st.write('')
+    st.subheader("**VaR:**")
+    dic2 = var(pctchang) 
+    xlist, ylist = [],[]
+    for key in dic2:
+        xlist.append(key)
+        ylist.append(dic2[key])
+    fig = px.bar(x=xlist,y=ylist,labels={'x': 'Percentile', 'y': 'Return %'})
+    st.plotly_chart(fig,use_container_width=True)
+    st.write("")
+    st.write("")
+    st.write(f"**Interpretation:** You will lose less than {dic2[95]}% of your investment tomorrow, 95% of the time, and gain more than {dic2[50]}% of your investment tomrrow, 50% of the time")
+
