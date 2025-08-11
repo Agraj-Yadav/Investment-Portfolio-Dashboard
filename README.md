@@ -25,9 +25,9 @@ The project is an interactive Streamlit web app that lets you track, analyze, an
    ```
    streamlit run findash1.py
    ```
-   Alternatively
+   Alternatively:
    ```
-   python -m streamlit run findash1.py)
+   python -m streamlit run findash1.py
    ```
 ## How to Use:
 1) Select Stocks : Choose 2–3 stocks from the dropdown.
