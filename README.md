@@ -1,4 +1,5 @@
-# Investment Portfolio Dashboard (prfolioscrsht.png)
+# Investment Portfolio Dashboard 
+! [Portfolio Dashboard Screenshot](prfolioscrsht.png)
 
 The project is an interactive Streamlit web app that lets you track, analyze, and visualize your investment portfolio. 
 
