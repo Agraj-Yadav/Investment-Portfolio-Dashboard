@@ -1,7 +1,8 @@
 # Investment Portfolio Dashboard 
 
 The project is an interactive Streamlit web app that lets you track, analyze, and visualize your investment portfolio. 
-! [Portfolio Dashboard Screenshot](prfolioscrsht.png)
+![Portfolio Dashboard Screenshot](prfolioscrsht.png)
+
 
 ## Features:
 1) Live Market Data : Fetches historical stock data from Yahoo Finance.
