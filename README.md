@@ -14,8 +14,8 @@ The project is an interactive Streamlit web app that lets you track, analyze, an
 ## Installation:
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/portfolio-dashboard.git
-   cd portfolio-dashboard
+   git clone https://github.com/Agraj-Yadav/Investment-Portfolio-Dashboard.git
+   cd Investment-Portfolio-Dashboard
    ```
 2. Install dependencies:
    ```
