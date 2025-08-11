@@ -14,20 +14,20 @@ The project is an interactive Streamlit web app that lets you track, analyze, an
 
 ## Installation:
 1. Clone the repository:
-   ```
+   ```bash
    git clone https://github.com/Agraj-Yadav/Investment-Portfolio-Dashboard.git
    cd Investment-Portfolio-Dashboard
    ```
 2. Install dependencies:
-   ```
+   ```bash
    pip install -r requirements.txt
    ```
 3. Run the app:
-   ```
+   ```bash
    streamlit run findash1.py
    ```
    Alternatively:
-   ```
+   ```bash
    python -m streamlit run findash1.py
    ```
 ## How to Use:
