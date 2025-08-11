@@ -25,7 +25,7 @@ The project is an interactive Streamlit web app that lets you track, analyze, an
    ```
    streamlit run findash1.py
    ```
-   # Alternatively
+   Alternatively
    ```
    python -m streamlit run findash1.py)
    ```
